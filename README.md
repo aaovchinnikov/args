@@ -5,7 +5,7 @@ A piece of code that demostrates some ideas of cmd-arguments processing.
 ### Arguments processing
 Command-line arguments is a common way to provide information to programm at invocation time.  
 \*nix-style arguments includes **options** and **positional arguments**.  
-Options represent the named properties and should at least have the short form: single dash ('-') symbol followed by single letter - or the long form: double dash ('--') followed by one or multiple words separated with dashes. Option may also have both forms.
+Options represent the named properties and should at least have the short form: single dash ('-') symbol followed by single letter - or the long form: double dash ('--') followed by one or multiple words separated with dashes. Option may also have both forms.  
 All options divides to flags and standard options:
 1. Flags - named options that represent some boolean property, for example `-f` or `--force`. Presence of the flag represents its value is `true` and absence represents `false`.  
 2. Regular options - named property that is followed by the value, for example `-p /var/run/app.pid` or `--pidfile /var/run/app.pid`.  
