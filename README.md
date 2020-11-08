@@ -7,7 +7,7 @@ Command-line arguments is a common way to provide information to programm at inv
 I believe that any part of the program that uses command-line arguments should declare this dependency explicitly. That's why I prefer to declare the arguments and their **semantics** with interface/contract and connect other parts of the programm to the implementation of such interface.  
 Concrete implementations of "Arguments"-interface represents sources of values for other parts of program.  
 
-\*nix-style arguments includes **options** and **positional arguments**.  
+Unix-style arguments includes **options** and **positional arguments**.  
 Options represent the named properties and should at least have the short form: single dash ('-') symbol followed by single letter - or the long form: double dash ('--') followed by one or multiple words separated with dashes. Option may also have both forms.  
 All options divides to **flags** and **regular options**:
 1. Flags - named options that represent some boolean property, for example `-f` or `--force`. Presence of the flag represents its value is `true` and absence represents `false`.  
