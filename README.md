@@ -15,7 +15,7 @@ All options divides to **flags** and **regular options**:
 
 Positional arguments represents values those semantics is determined by their position in command-line string, for example `divide 8 2` have the `8` as dividend and the `2` as divider. The real semantis for positional arguments is always hidden from user and may be revealed only with help of documentation. This facts concludes that any programm that uses positional arguments and don't have any documentation is **unusable** because you can't be sure about arguments' semantics.  
 
-It's common practice to stick multiple short-format options under the single dash, for example `tar -xzf`, while it's still allowed to have separate short-format options or long-format options as well, e.g. `rsync -avu -zb --exclude '*~' samba:samba/ .`  
+It's common practice to stick together multiple short-format options under the single dash, for example `tar -xzf`, while it's still allowed to have separate short-format options or long-format options as well, e.g. `rsync -avu -zb --exclude '*~' samba:samba/ .`  
 
 Some authors uses equal-sign-separated format, e.g. `--pidfile=/var/run/app.pid`, and I totally believe that this approach is preferable, because it's easier to parse and syntax is more explicit.  
 Some approaches allow options to have list-like values with implicit format, e.g.
