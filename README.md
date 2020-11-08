@@ -22,7 +22,7 @@ Some approaches allow options to have list-like values with implicit format, e.g
 ```
 bin --files /var/run/app1.pid /var/run/app2.pid
 ```
-I totally disagree, because such format leads to undetermined argument parsing and hides syntax rules - you just can't know where list for the option ends and where positional arguments begin.
+I totally disagree, because such format leads to undetermined argument parsing and hides syntax rules - you just can't know where the list for the option ends and where the positional arguments begin.
 
 ### Help / usage info
 Help / usage must be designed as an independent task. Programmer should always have an opportunity to write the help message statically, because anyway author knows better how software should be used and what correct argument combinations exist.  
