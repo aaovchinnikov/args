@@ -25,4 +25,4 @@ I totally disagree, because such format leads to undetermined argument parsing a
 Help / usage must be designed as an independent task. Programmer should always have an opportunity to write the help message statically, because anyway author knows better how software should be used and what correct argument combinations exist.  
 Any attempt to take away this opportunity from author/programmer leads to restrictions on help message format and content thus reduces programmers freedom of choice.  
 But I clearly realize that static help message may become outdated during the application livecycle.  
-That's why the final decision what approuach to use: static free-form vs configured-preformatted - is programmers responsibility.
+That's why the final decision what approuach to use: static free-form vs configured-preformatted - is programmer's responsibility.
