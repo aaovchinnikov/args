@@ -15,10 +15,14 @@ Positional arguments represents values those semantics is determined by their po
 It's common practice to stick multiple short-format options under the single dash, for example `tar -xzf`, while it's still allowed to have separate short-format options or long-format options as well, e.g. `rsync -avu -zb --exclude '*~' samba:samba/ .`  
 
 Some authors uses equal-sign-separated format, e.g. `--pidfile=/var/run/app.pid`, and I totally belive that this approach is preferable, because it's easier to parse and syntax is more explicit. 
-Some approaches allow options to have list-like values with implicit format, e.g. `--files /var/run/app1.pid /var/run/app2.pid`. I totally disagree, because such format leads to undetermined argument parsing and hides syntax rules - you just can't know where list for the option ends and where positional arguments begin.
+Some approaches allow options to have list-like values with implicit format, e.g.
+```
+bin --files /var/run/app1.pid /var/run/app2.pid
+```
+I totally disagree, because such format leads to undetermined argument parsing and hides syntax rules - you just can't know where list for the option ends and where positional arguments begin.
 
 ### Help / usage info
 Help / usage must be designed as an independent task. Programmer should always have an opportunity to write the help message statically, because anyway author knows better how software should be used and what correct argument combinations exist.  
 Any attempt to take away this opportunity from author/programmer leads to restrictions on help message format and content thus reduces programmers freedom of choice.  
-But I clearly realize that static help message may become outdated walkthrough the application livecycle.  
+But I clearly realize that static help message may become outdated during the application livecycle.  
 That's why the final decision what approuach to use: static free-form vs configured-preformatted - is programmers responsibility.
