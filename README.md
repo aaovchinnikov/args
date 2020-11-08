@@ -4,6 +4,9 @@ A piece of code that demostrates some ideas of cmd-arguments processing.
 ## Basic ideas and considerations
 ### Arguments processing
 Command-line arguments is a common way to provide information to programm at invocation time.  
+I believe that any part of the program that uses command-line arguments should declare this dependency explicitly. That's why I prefer to declare the arguments and their **semantics** with interface/contract and connect other parts of the programm to the implementation of such interface.  
+Concrete implementations of "Arguments"-interface represents sources of values for other parts of program.  
+
 \*nix-style arguments includes **options** and **positional arguments**.  
 Options represent the named properties and should at least have the short form: single dash ('-') symbol followed by single letter - or the long form: double dash ('--') followed by one or multiple words separated with dashes. Option may also have both forms.  
 All options divides to **flags** and **regular options**:
@@ -14,7 +17,7 @@ Positional arguments represents values those semantics is determined by their po
 
 It's common practice to stick multiple short-format options under the single dash, for example `tar -xzf`, while it's still allowed to have separate short-format options or long-format options as well, e.g. `rsync -avu -zb --exclude '*~' samba:samba/ .`  
 
-Some authors uses equal-sign-separated format, e.g. `--pidfile=/var/run/app.pid`, and I totally belive that this approach is preferable, because it's easier to parse and syntax is more explicit.  
+Some authors uses equal-sign-separated format, e.g. `--pidfile=/var/run/app.pid`, and I totally believe that this approach is preferable, because it's easier to parse and syntax is more explicit.  
 Some approaches allow options to have list-like values with implicit format, e.g.
 ```
 bin --files /var/run/app1.pid /var/run/app2.pid
