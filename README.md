@@ -5,7 +5,7 @@ A piece of code that demostrates some ideas of cmd-arguments processing.
 ### Arguments processing
 Command-line arguments is a common way to provide information to programm at invocation time.  
 I believe that any part of the program that uses command-line arguments should declare this dependency explicitly. That's why I prefer to declare the arguments and their **semantics** with interface/contract and connect other parts of the programm to the implementation of such interface.  
-Concrete implementations of "Arguments"-interface represents sources of values for other parts of program.  
+Concrete implementations of "Arguments"-interface represents sources of values for other parts of the program.  
 
 Unix-style arguments includes **options** and **positional arguments**.  
 Options represent the named properties and should at least have the short form: single dash ('-') symbol followed by single letter - or the long form: double dash ('--') followed by one or multiple words separated with dashes. Option may also have both forms.  
